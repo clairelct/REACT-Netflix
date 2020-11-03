@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import data from "./assets/data.json";
+
+// import Section from "./components/Section";
+import Sections from "./components/Sections";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <img
+          className="logo"
+          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+          alt="Logo Netflix"
+        />
+        <Sections data={data} />
+      </div>
+    </>
   );
 }
-
 export default App;
